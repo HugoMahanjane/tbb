@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 import { useGetCallById } from "@/hooks/useGetCallById";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 //import { useToast } from "@/components/ui/use-toast";
 
 const Table = ({
@@ -71,9 +72,9 @@ const PersonalRoom = () => {
           className="bg-dark-3"
           onClick={() => {
             navigator.clipboard.writeText(meetingLink);
-           /*  toast({
+            toast({
               title: "Link Copied",
-            }); */
+            }); 
           }}
         >
           Copiar
