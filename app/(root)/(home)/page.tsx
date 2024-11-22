@@ -1,5 +1,5 @@
 import MeetingTypeList from '@/components/MeetingTypeList'
-import Image from 'next/image'
+
 import React from 'react'
 
 const Home = () => {

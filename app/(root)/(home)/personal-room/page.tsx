@@ -76,7 +76,7 @@ const PersonalRoom = () => {
             });
           }}
         >
-          Copiar invitacion
+          Copiar
         </Button>
       </div>
     </section>
