@@ -1,6 +1,6 @@
 "use client"
+/* eslint-disable no-use-before-define */
 
-// Inspired by react-hot-toast library
 import * as React from "react"
 
 import type {
