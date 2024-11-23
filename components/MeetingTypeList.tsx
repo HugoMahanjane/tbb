@@ -10,6 +10,7 @@ import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk"
 import { useToast } from "@/hooks/use-toast"
 import { Textarea } from "./ui/textarea"
 import ReactDatePicker from 'react-datepicker'
+import Loaded from "./Loaded"
 
 const MeetingTypeList = () => {
     const router = useRouter()
@@ -27,6 +28,7 @@ const MeetingTypeList = () => {
 
     const [callDetails, setCallDetails] = useState<Call>()
     const { toast } = useToast()
+
     const createMeeting=async()=>{
       if(!client || !user) return
 
@@ -78,7 +80,7 @@ const MeetingTypeList = () => {
         })
       }
     }
-
+    if (!client || !user) return <Loaded/>;
     const meetingLink=`${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`
   return (
     <section className="grid grid-cols-1 gap-5
